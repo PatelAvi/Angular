@@ -1,0 +1,88 @@
+<div class="design"  >
+    <p>This is Header Component</p>
+</div>
+<div class="box" [style.margin]="mystyle1">Class Binding</div>
+<div class="row">
+    <div class="col-md-4">
+        <select name="product" class="form-control" (change)="getProductVal($event)">
+            <option value="Select Product">Select Product</option>
+            <option value="TV">TV</option>
+            <option value="Laptop">Laptop</option>
+        </select>
+    </div>
+    <div class="col-md-12" [ngSwitch]="selectedProduct" >
+        <h2 class="text-danger" *ngSwitchDefault>Please Select the Product</h2>
+        <h2 class="text-danger" *ngSwitchCase="'TV'">TV</h2>
+        <h2 class="text-danger" *ngSwitchCase="'Laptop'">Laptop</h2>
+    </div>
+</div>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Product Quantity</th>
+                        <th>Product Status</th>           
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr *ngFor="let item of items; index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.price}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.status}}</td>
+                    </tr>
+                </tbody>
+            </div>
+        </div>
+    </div>
+
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <input type="text" placeholder="User Name" class="form-control" #uname name="">
+        </div>
+        <div class="col-md-3">
+            <input type="text" name="" placeholder="Password" class="form-control" #password>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-success" type="submit" (click)="onButtonClick(uname,password)">Create User</button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-danger" (click)="onButtonRemove(uname,password)" type="submit">Remove</button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>User Name</th>
+                        <th>Password</th>
+                        <th>Remove</th>
+                        <th></th>           
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr *ngFor="let user of users; index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.pass}}</td>
+                        <td><button class="btn btn-danger" type="submit" (click)="onRemove(i)">Remove User</button></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </div>
+        </div>
+    </div>
+</div>
+

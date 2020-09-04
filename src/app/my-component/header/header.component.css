@@ -1,0 +1,21 @@
+.design{
+    color: orange;
+    font-size: 50px;
+    padding: 10px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.box{
+    width:50px;
+    height: 100px;
+    background: red;
+}
+thead{
+    background : black;
+    color: white;
+    
+}
+tbody{
+    background-color: gray;
+    color: black;
+}
