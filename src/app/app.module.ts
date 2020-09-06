@@ -20,6 +20,8 @@ import { AngularComponent } from './my-component/technology/angular/angular.comp
 import { PHPComponent } from './my-component/technology/php/php.component';
 import { WordpressComponent } from './my-component/technology/wordpress/wordpress.component';
 import { ASPComponent } from './my-component/technology/asp/asp.component';
+import { PremiumintenshipComponent } from './my-component/premiumintenship/premiumintenship.component';
+import { ChildComponent } from './my-component/child/child.component';
 
 const router : Routes = [{
   path : '', redirectTo : 'login', pathMatch : 'full'
@@ -81,6 +83,9 @@ const router : Routes = [{
   ]
 },
 {
+  path : 'premium' , component : PremiumintenshipComponent
+},
+{
   path : '**',component : PageNotFoundComponent
 }]
 
@@ -101,7 +106,9 @@ const router : Routes = [{
     AngularComponent,
     PHPComponent,
     WordpressComponent,
-    ASPComponent
+    ASPComponent,
+    PremiumintenshipComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

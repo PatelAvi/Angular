@@ -1,0 +1,54 @@
+<div class="page-area">
+    <h1>Premium Intenship</h1>
+    <hr class="mb-3">
+    <div class="alert alert-success border d-flex align-items-center " *ngIf="addedproduct">
+        <strong class="text text-danger">{{addedproduct}}</strong>&nbsp; is Selected and Added in Cart
+        <button class="btn btn-danger my-4" style="float: right;">Checkout</button>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card" style="width: 18rem;">
+                <img src="https://u01.appmifile.com/images/2019/05/15/374a9880-c0b4-4f02-8b9c-8b202c833bf5.jpg" height="170" width="170" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Android</h5>
+                  
+                  <button class="btn btn-danger" (click)="onSelectedProduct('Android')">Select this Technology</button>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;padding: 10px;">
+                <img src="https://www.digifutura.com/wp-content/uploads/2019/11/hire-angular-developers.png" height="170" width="170" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Angular</h5>
+                  <button class="btn btn-danger" (click)="onSelectedProduct('Angular')">Select this Technology</button>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;padding: 10px;">
+                <img src="https://image.shutterstock.com/image-photo/businessman-pointing-on-virtual-screen-260nw-450181732.jpg" height="170" width="170" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">PHP</h5>
+                  <button class="btn btn-danger" (click)="onSelectedProduct('PHP')">Select this Technology</button>
+                  
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;padding: 10px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRbGPEAlt8Kiudz5gQ85Q6W3hCD3g3Rewg-AQ&usqp=CAU" height="170" width="170" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Wordpress</h5>
+                  <button class="btn btn-danger" (click)="onSelectedProduct('Wordpress')">Select this Technology</button>
+
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;padding: 10px;">
+                <img src="https://stackify.com/wp-content/uploads/2017/08/ASPnet-Interview-Questions-Header-1280x720.jpg" height="170" width="170" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">ASP.NET</h5>
+                  <button class="btn btn-danger" (click)="onSelectedProduct('ASP.NET')">Select this Technology</button>
+                  
+                </div>
+              </div>
+              
+        </div>
+        <app-child [selectedTechnology]="selectedTechnology" [technologyselect]="technologyselect" (addedproduct)="ProductAdd($event)" ></app-child>
+    </div>
+</div>
+

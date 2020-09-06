@@ -1,0 +1,5 @@
+<div class="col-md-12 text-center bg-danger py-4">
+    <h1 *ngIf="!selectedTechnology">Please Select Technology</h1>
+    <h1 *ngIf="selectedTechnology">{{technologyselect}} is Selected</h1>
+    <button class="btn btn-danger" (click)="onAddClick()">Add Cart</button>
+</div>
